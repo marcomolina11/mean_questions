@@ -1,0 +1,19 @@
+<p><a href="#!/questions">Home</a> | <a href="#!/questions/{{question._id}}/new_answer">Answer the Question</a> | <a href="/" ng-click='logout()'>Log Out</a></p>
+<h1>{{ question.question }}</h1>
+<h3>{{ question.description }}</h3>
+
+<table>
+	<tr ng-repeat='answer in answers track by $index'>
+		<td>
+			<h4>{{answer.user}}</h4>
+			<p><b>{{answer.answer}}</b></p>
+			<p>{{answer.details}}</p>
+		</td>
+		<td>
+			{{answer.likes}}
+			<form ng-submit=likeAnswer(answer._id)>
+				<input type="submit" value="Like!">
+			</form>
+		</td>
+	</tr>
+</table>

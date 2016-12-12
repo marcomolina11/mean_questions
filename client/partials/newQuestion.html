@@ -1,0 +1,10 @@
+<p><a href="#!/questions">Home</a> | <a href="/" ng-click='logout()'>Log Out</a></p>
+<h1>New Question</h1>
+{{errors.question.message}}
+<form ng-submit='create()'>
+	<p>Question:</p>
+	<p><textarea ng-model='newQuestion.question' required></textarea></p>
+	<p>Description (optional):</p>
+	<p><textarea ng-model='newQuestion.description'></textarea></p>
+	<p><input type="submit" value="Submit"></p>
+</form>
